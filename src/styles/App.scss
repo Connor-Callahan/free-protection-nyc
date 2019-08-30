@@ -1,0 +1,33 @@
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+
+  #search-header {
+    font-family: helvetica;
+    text-align: center;
+  }
+
+  #search-input {
+    text-align: center;
+    outline: none;
+    font-size: 18px;
+    margin: 15px;
+  }
+  #btn-container {
+    text-align: center;
+
+    .borough-btn {
+      font-size: 18px;
+      padding: 5px;
+      font-family: nevis;
+      background: transparent;
+      outline: none;
+      border: none;
+
+      &:hover {
+        background: red;
+        color: white;
+      }
+    }
+  }
+}
