@@ -29,15 +29,19 @@ class App extends Component {
     })
   }
 
+  boroughFilter = (e) => {
+    console.log(e.target.id)
+  }
+
   render(){
       return (
         <div className="App">
           <h1 id="search-header"> NYC Free Condom Finder</h1>
-          <Search 
+          <BoroughFilter boroughFilter={this.boroughFilter}/>
+          <Search
             locationFilter={this.locationFilter}
             all_locations={this.state.all_locations}/>
           <Locations search_filter={this.state.search_filter}/>
-          <BoroughFilter />
         </div>
       );
     }

@@ -7,7 +7,7 @@ class Search extends Component {
 
 
     return (
-      <div id="search-input">
+      <div>
         <input
             id="search-input"
             autoComplete="off"
