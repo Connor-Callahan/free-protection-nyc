@@ -15,6 +15,7 @@ class Search extends Component {
             onChange={this.props.locationFilter}
             placeholder='Search by Location...'
             />
+          <button>submit</button>
       </div>
     );
   }

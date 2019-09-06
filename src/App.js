@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Search from './components/Search'
 import BoroughFilter from './components/BoroughFilter'
 import Locations from './containers/Locations'
+import Menu from './containers/Menu'
+
 import './styles/App.scss'
 import './styles/BoroughFilter.scss'
 
@@ -10,7 +12,8 @@ class App extends Component {
 
   state = {
     all_locations: [],
-    search_filter: null
+    search_filter: null,
+    borough_filter: null
   }
 
   componentDidMount(){
@@ -30,7 +33,9 @@ class App extends Component {
   }
 
   boroughFilter = (e) => {
-    console.log(e.target.id)
+    this.setState({
+      borough_filter: e.target.id
+    })
   }
 
   render(){
@@ -42,6 +47,7 @@ class App extends Component {
             locationFilter={this.locationFilter}
             all_locations={this.state.all_locations}/>
           <Locations search_filter={this.state.search_filter}/>
+          <Menu />
         </div>
       );
     }
