@@ -2,11 +2,11 @@
   max-width: 800px;
   margin: 0 auto;
 
+  // search-component
   #search-header {
     font-family: helvetica;
     text-align: center;
   }
-
   #search-input {
     text-align: center;
     outline: none;
@@ -14,7 +14,12 @@
     font-size: 18px;
     margin: 15px;
   }
+  button {
+    border: 2px solid black;
+    outline: none;
+  }
 
+  // borough-filter
   #btn-container {
     text-align: center;
 
@@ -35,13 +40,36 @@
 
   #menu-container {
     border: 2px solid black;
-    height: 200px;
+    height: 600px;
 
     #list-container {
       border: 2px solid black;
-      background: blue;
+      background: black;
+      color: white;
+      font-family: helvetica;
       width: 33%;
       height: 100%;
+      overflow-x: scroll;
+      .location {
+        border: 2px solid white;
+        padding: 15px;
+
+        h1 {
+          font-size: 20px;
+        }
+        .location {
+          h1 {
+            font-size: 22px;
+          }
+          .address {
+            font-size: 14px;
+          }
+          .zip {
+            font-size: 12px;
+          }
+      }
+
+      }
     }
   }
 

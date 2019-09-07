@@ -7,8 +7,10 @@ class Menu extends Component {
   render() {
     return (
       <div id="menu-container">
-      <List/>
-
+      <List
+        openProfile={this.props.openProfile}
+        filtered={this.props.filtered}
+        />
       </div>
     );
   }
