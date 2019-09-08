@@ -13,7 +13,7 @@ class Search extends Component {
             autoComplete="off"
             type="text"
             onChange={this.props.locationFilter}
-            placeholder='Search by Location...'
+            placeholder='Search by Address...'
             />
           <button>submit</button>
       </div>

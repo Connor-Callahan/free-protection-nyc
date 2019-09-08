@@ -7,10 +7,18 @@ class Menu extends Component {
   render() {
     return (
       <div id="menu-container">
-      <List
+      {
+        this.props.filtered.length > 0 ?
+
+        <List
         openProfile={this.props.openProfile}
         filtered={this.props.filtered}
         />
+        :
+        <div>
+          <h1>hello jello</h1>
+        </div>
+      }
       </div>
     );
   }

@@ -13,7 +13,8 @@ class App extends Component {
   state = {
     all_locations: [],
     search_filter: null,
-    borough_filter: []
+    borough_filter: [],
+    location: null,
   }
 
   componentDidMount(){
@@ -39,24 +40,36 @@ class App extends Component {
 
     let uniq = []
 
-    for(let i = 0; i < filtered.length; i++) {
-      let n = filtered[i].facilityname
-      if(i + 1 === filtered.length) {
-        console.log('fuck you')
+    filtered.forEach(j => {
+      let facilityname = j.facilityname
+      let foundLocation = uniq.find(l => {
+        return l.facilityname === facilityname
+      })
+      if(foundLocation) {
+        console.log('found')
       } else {
-        if(filtered[i + 1].facilityname === n) {
-          console.log(filtered[i])
-        }
+        uniq.push(j)
       }
-    }
+    })
 
     this.setState({
-      borough_filter: filtered
+      borough_filter: uniq
     })
   }
 
   openProfile = (e) => {
-    console.log(e.target.key)
+    let profile = this.state.borough_filter.find(l => {
+      return l.facilityname === e.target.id
+    })
+    if(this.state.location === e.target.id) {
+      this.setState({
+        location: null
+      })
+    } else {
+      this.setState({
+        location: profile
+      })
+    }
   }
 
   render(){

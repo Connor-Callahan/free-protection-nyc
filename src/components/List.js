@@ -9,8 +9,12 @@ class List extends Component {
         this.props.filtered.length > 0 ?
         this.props.filtered.map(l => {
           return <div className="location"
-                onClick={this.props.openProfile}
-                key={l.facilityname}>
+                key={Math.random()}>
+            <h2 onClick={this.props.openProfile}
+              id={l.facilityname}
+            >
+            ˅
+            </h2>
             <h1>{l.facilityname}</h1>
               <p className="address">{l.address}</p>
               <p className="zip">{l.zipcode}</p>
