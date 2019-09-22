@@ -13,12 +13,12 @@ class List extends Component {
             <h2 onClick={this.props.openProfile}
               id={l.facilityname}
             >
-            ˅
             </h2>
             <h1>{l.facilityname}</h1>
               <p className="address">{l.address}</p>
               <p className="zip">{l.zipcode}</p>
               <p className="phone"> ☎︎ :  {l.phone}</p>
+              <p onClick>={}Extend Profile Info</p>
           </div>
 
         })

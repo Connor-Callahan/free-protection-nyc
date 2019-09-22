@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Search from './components/Search'
 import BoroughFilter from './components/BoroughFilter'
+import SimpleMap from './components/SimpleMap'
 import Locations from './containers/Locations'
 import Menu from './containers/Menu'
 
@@ -81,6 +82,7 @@ class App extends Component {
             locationFilter={this.locationFilter}
             all_locations={this.state.all_locations}/>
           <Locations search_filter={this.state.search_filter}/>
+          <SimpleMap />
           <Menu
             filtered={this.state.borough_filter}
             openProfile={this.openProfile}
